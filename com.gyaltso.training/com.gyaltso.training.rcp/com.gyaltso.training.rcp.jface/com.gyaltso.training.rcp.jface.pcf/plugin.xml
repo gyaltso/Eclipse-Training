@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            description="Category contributed by the Gyaltso UI plug-in"
+            id="com.gyaltso.training.rcp.jface.pcf.category"
+            name="Gyaltso Commands">
+      </category>
+   </extension>
+   <extension
+         name="Command with no handler"
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            description="Command with handler not specified"
+            id="com.gyaltso.training.rcp.jface.pcf.command.nohandler"
+            name="Command with handler not specified">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command with a Default handler"
+            id="com.gyaltso.training.rcp.jface.pcf.command.defaulthandler"
+            name="Command with a Default handler">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            description="Command with a specific handler"
+            id="com.gyaltso.training.rcp.jface.pcf.command.specifichandler"
+            name="Command with a specific handler">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command in the Main toolbar"
+            id="com.gyaltso.training.rcp.jface.pcf.command.inmaintoolbar"
+            name="Command in the Main toolbar">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command in the Main menu"
+            id="com.gyaltso.training.rcp.jface.pcf.command.inmainmenu"
+            name="Command in the Main menu">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command in the Popup Menu of the Package explorer"
+            id="com.gyaltso.training.rcp.jface.pcf.command.pkgexppopupmenu"
+            name="Command in the Popup Menu of the Package explorer">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command in the View Menu of the Package explorer"
+            id="com.gyaltso.training.rcp.jface.pcf.command.pkgexpviewmenu"
+            name="Command in the View Menu of the Package explorer">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command in the Toolbar of the Package explorer"
+            id="com.gyaltso.training.rcp.jface.pcf.command.pkgexptoolbar"
+            name="Command in the Toolbar of the Package explorer">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command in the Popup Menu of the Package explorer before the New menu"
+            id="com.gyaltso.training.rcp.jface.pcf.command.beforenewgroup"
+            name="Command in the Popup Menu of the Package explorer before the New menu">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command in the Popup Menu of the Package explorer at the end of the New menu"
+            id="com.gyaltso.training.rcp.jface.pcf.command.endofnewgroup"
+            name="Command in the Popup Menu of the Package explorer at the end of the New menu">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pcf.category"
+            defaultHandler="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.DefaultCommandHandler"
+            description="Command in the Popup Menu of the Package explorer before the open group"
+            id="com.gyaltso.training.rcp.jface.pcf.command.beforeopengroup"
+            name="Command in the Popup Menu of the Package explorer before the open group">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.gyaltso.training.rcp.jface.pcf.toolbar">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.nohandler"
+                  label="Command with no handler"
+                  style="push"
+                  tooltip="Command with no handler">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.gyaltso.training.rcp.jface.pcf.toolbar02">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.defaulthandler"
+                  label="Command with a Default handler"
+                  style="push"
+                  tooltip="Command with a Default handler">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.gyaltso.training.rcp.jface.pcf.toolbar03">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.specifichandler"
+                  id="com.gyaltso.training.rcp.jface.pcf.command.specifichandler"
+                  label="Command with a specific handler"
+                  style="push"
+                  tooltip="Command with a specific handler">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.gyaltso.training.rcp.jface.pcf.toolbar04">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.inmaintoolbar"
+                  label="Command in the Main toolbar"
+                  style="push"
+                  tooltip="Command in the Main toolbar">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="com.gyaltso.training.rcp.jface.pcf.menu"
+               label="Gyaltso">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.inmainmenu"
+                  label="Command in the Main menu"
+                  style="push"
+                  tooltip="Command in the Main menu">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <menu
+               id="com.gyaltso.training.rcp.jface.pcf.menu02"
+               label="Gyaltso">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexppopupmenu"
+                  label="Command in the Popup Menu of the Package explorer"
+                  style="push"
+                  tooltip="Command in the Popup Menu of the Package explorer">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.jdt.ui.PackageExplorer">
+         <menu
+               id="com.gyaltso.training.rcp.jface.pcf.menu03"
+               label="Gyaltso">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexpviewmenu"
+                  label="Command in the View Menu of the Package explorer"
+                  style="push"
+                  tooltip="Command in the View Menu of the Package explorer">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.jdt.ui.PackageExplorer">
+         <command
+               commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexptoolbar"
+               label="Command in the Toolbar of the Package explorer"
+               style="push"
+               tooltip="Command in the Toolbar of the Package explorer">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer?before=group.new">
+         <menu
+               id="com.gyaltso.training.rcp.jface.pcf.menu03"
+               label="Gyaltso">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.beforenewgroup"
+                  label="Command in the Popup Menu of the Package explorer before the New menu"
+                  style="push"
+                  tooltip="Command in the Popup Menu of the Package explorer before the New menu">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer?endof=group.new">
+         <menu
+               id="com.gyaltso.training.rcp.jface.pcf.menu04"
+               label="Gyaltso">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.beforenewgroup"
+                  label="Command in the Popup Menu of the Package explorer before the New menu"
+                  style="push"
+                  tooltip="Command in the Popup Menu of the Package explorer before the New menu">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer?before=group.open">
+         <menu
+               id="com.gyaltso.training.rcp.jface.pcf.menu05"
+               label="Gyaltso">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pcf.command.beforeopengroup"
+                  label="Command in the Popup Menu of the Package explorer before the open group"
+                  style="push"
+                  tooltip="Command in the Popup Menu of the Package explorer before the open group">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commandImages">
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.nohandler"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.defaulthandler"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.specifichandler"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.inmaintoolbar"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.inmainmenu"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexppopupmenu"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexpviewmenu"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexptoolbar"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.beforenewgroup"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.endofnewgroup"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+      <image
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.beforeopengroup"
+            hoverIcon="icons/image.gif"
+            icon="icons/image.gif">
+      </image>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.gyaltso.training.rcp.jface.pcf.cmdhandlers.SpecificCommandHandler"
+            commandId="com.gyaltso.training.rcp.jface.pcf.command.specifichandler">
+      </handler>
+   </extension>
+
+</plugin>
