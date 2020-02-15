@@ -17,6 +17,16 @@
             id="com.gyaltso.training.rcp.jface.pef.command.multiplehandlers"
             name="Command with one default and multiple specific handlers">
       </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pef.category"
+            id="com.gyaltso.training.rcp.jface.pef.command.selectioncounthandler"
+            name="Command with specific handler that is activated when the selection count equals 1">
+      </command>
+      <command
+            categoryId="com.gyaltso.training.rcp.jface.pef.category"
+            id="com.gyaltso.training.rcp.jface.pef.command.selectioncounthandlerofspectype"
+            name="Command with specific handler that is activated when more than one txt files are selected">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -32,6 +42,36 @@
                   label="Command with one default and multiple specific handlers"
                   style="push"
                   tooltip="Command with one default and multiple specific handlers">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.gyaltso.training.rcp.jface.pef.toolbar02">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pef.command.selectioncounthandler"
+                  icon="icons/image.png"
+                  id="com.gyaltso.training.rcp.jface.pef.command.selectioncounthandler"
+                  label="Command with specific handler that is activated when the selection count equals 1"
+                  style="push"
+                  tooltip="Command with specific handler that is activated when the selection count equals 1">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.gyaltso.training.rcp.jface.pef.toolbar03">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.pef.command.selectioncounthandlerofspectype"
+                  icon="icons/image.png"
+                  id="com.gyaltso.training.rcp.jface.pef.command.selectioncounthandlerofspectype"
+                  label="Command with specific handler that is activated when more than one txt files are selected"
+                  style="push"
+                  tooltip="Command with specific handler that is activated when more than one txt files are selected">
             </command>
          </toolbar>
       </menuContribution>
@@ -57,8 +97,10 @@
                               value="txt">
                         </test>
                      </adapt>
-                  </and></iterate>
-            </with></activeWhen>
+                  </and>
+               </iterate>
+            </with>
+         </activeWhen>
       </handler>
       <handler
             class="com.gyaltso.training.rcp.jface.pef.handlers.PropertyFileSelHandler"
@@ -77,6 +119,45 @@
                         <test
                               property="org.eclipse.core.resources.extension"
                               value="properties">
+                        </test>
+                     </adapt>
+                  </and>
+               </iterate>
+            </with>
+         </activeWhen>
+      </handler>
+      <handler
+            class="com.gyaltso.training.rcp.jface.pef.handlers.SelectionCountHandler"
+            commandId="com.gyaltso.training.rcp.jface.pef.command.selectioncounthandler">
+         <activeWhen>
+            <with
+                  variable="selection">
+               <count
+                     value="1">
+               </count>
+            </with>
+         </activeWhen>
+      </handler>
+      <handler
+            class="com.gyaltso.training.rcp.jface.pef.handlers.SelectionCountHandler"
+            commandId="com.gyaltso.training.rcp.jface.pef.command.selectioncounthandlerofspectype">
+         <activeWhen>
+            <with
+                  variable="selection">
+               <count
+                     value="(1-">
+               </count>
+               <iterate
+                     ifEmpty="false">
+                  <and>
+                     <instanceof
+                           value="org.eclipse.core.resources.IFile">
+                     </instanceof>
+                     <adapt
+                           type="org.eclipse.core.resources.IFile">
+                        <test
+                              property="org.eclipse.core.resources.extension"
+                              value="txt">
                         </test>
                      </adapt>
                   </and>
