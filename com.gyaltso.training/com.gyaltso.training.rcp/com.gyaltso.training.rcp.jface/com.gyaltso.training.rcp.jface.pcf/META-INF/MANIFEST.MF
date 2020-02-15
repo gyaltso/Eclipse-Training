@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: JFace Command and Expression framework example
+Bundle-Name: Platform Command Framework examples
 Bundle-SymbolicName: com.gyaltso.training.rcp.jface.pcf;singleton:=true
 Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: com.gyaltso.training.rcp.jface.pcf.Activator

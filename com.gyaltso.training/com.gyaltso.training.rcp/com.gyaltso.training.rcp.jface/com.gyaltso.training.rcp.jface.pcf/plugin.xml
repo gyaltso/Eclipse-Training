@@ -6,7 +6,7 @@
       <category
             description="Category contributed by the Gyaltso UI plug-in"
             id="com.gyaltso.training.rcp.jface.pcf.category"
-            name="Gyaltso Commands">
+            name="Gyaltso PCF Commands">
       </category>
    </extension>
    <extension
@@ -242,58 +242,58 @@
          point="org.eclipse.ui.commandImages">
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.nohandler"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.defaulthandler"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.specifichandler"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.inmaintoolbar"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.inmainmenu"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexppopupmenu"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexpviewmenu"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.pkgexptoolbar"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.beforenewgroup"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.endofnewgroup"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
       <image
             commandId="com.gyaltso.training.rcp.jface.pcf.command.beforeopengroup"
-            hoverIcon="icons/image.gif"
-            icon="icons/image.gif">
+            hoverIcon="icons/image.png"
+            icon="icons/image.png">
       </image>
    </extension>
    <extension

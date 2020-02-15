@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Platform Expression framework examples
+Bundle-SymbolicName: com.gyaltso.training.rcp.jface.pef;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: com.gyaltso.training.rcp.jface.pef.Activator
+Bundle-Vendor: Gyaltso Technologies
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.gyaltso.training.rcp.jface.pef
+Bundle-ActivationPolicy: lazy

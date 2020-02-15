@@ -16,5 +16,6 @@
 
 	<modules>
 		<module>com.gyaltso.training.rcp.jface.pcf</module>
+		<module>com.gyaltso.training.rcp.jface.pef</module>
 	</modules>
 </project>
