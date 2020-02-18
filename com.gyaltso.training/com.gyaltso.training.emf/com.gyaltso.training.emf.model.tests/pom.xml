@@ -8,7 +8,7 @@
 		<groupId>com.gyaltso.training</groupId>
 		<artifactId>com.gyaltso.training.emf</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../com.gyaltso.training.emf</relativePath>
+		<relativePath>../../com.gyaltso.training.emf</relativePath>
 	</parent>
 
 	<!-- Artifact metadata -->

@@ -14,6 +14,4 @@
 	<!-- Artifact metadata -->
 	<artifactId>com.gyaltso.training.rcp.jface.pcf</artifactId>
 	<packaging>eclipse-plugin</packaging>
- 
-
-</project>
+	</project>
