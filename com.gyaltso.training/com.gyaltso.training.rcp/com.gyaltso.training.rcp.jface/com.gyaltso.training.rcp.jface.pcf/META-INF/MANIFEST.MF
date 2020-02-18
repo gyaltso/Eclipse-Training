@@ -6,7 +6,8 @@ Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: com.gyaltso.training.rcp.jface.pcf.Activator
 Bundle-Vendor: Gyaltso Technologies
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.core.expressions;bundle-version="3.6.600"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.gyaltso.training.rcp.jface.commandfw
 Bundle-ActivationPolicy: lazy

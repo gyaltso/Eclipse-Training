@@ -25,5 +25,6 @@
 
 	<modules>
 		<module>com.gyaltso.training.rcp</module>
+		<module>com.gyaltso.training.emf</module>
 	</modules>
 </project>

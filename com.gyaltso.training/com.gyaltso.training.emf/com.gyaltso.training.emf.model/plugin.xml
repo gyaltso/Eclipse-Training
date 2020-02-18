@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated creditcard -->
+      <package
+            uri="http://www.gyaltso.com/training/emf/model"
+            class="com.gyaltso.training.emf.model.creditcard.CreditcardPackage"
+            genModel="model/creditcard.genmodel"/>
+   </extension>
+
+</plugin>

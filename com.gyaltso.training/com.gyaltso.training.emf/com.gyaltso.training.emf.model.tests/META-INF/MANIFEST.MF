@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Credit Card EMF model tests
+Bundle-SymbolicName: com.gyaltso.training.emf.model.tests;singleton:=true
+Automatic-Module-Name: com.gyaltso.training.emf.model.tests
+Bundle-Version: 0.0.1.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: Gyaltso Technologies
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.gyaltso.training.emf.model.creditcard.tests
+Require-Bundle: org.eclipse.core.runtime,
+ com.gyaltso.training.emf.model;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.junit;visibility:=reexport,
+ com.google.guava
+Bundle-ActivationPolicy: lazy
