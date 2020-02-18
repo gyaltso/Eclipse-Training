@@ -8,10 +8,11 @@
 		<groupId>com.gyaltso.training</groupId>
 		<artifactId>com.gyaltso.training.rcp</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../../com.gyaltso.training.rcp</relativePath>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<!-- Artifact metadata -->
 	<artifactId>com.gyaltso.training.rcp.jface.pcf</artifactId>
-	<packaging>eclipse-plugin</packaging>
-	</project>
+	<packaging>eclipse-plugin</packaging>   
+
+</project>

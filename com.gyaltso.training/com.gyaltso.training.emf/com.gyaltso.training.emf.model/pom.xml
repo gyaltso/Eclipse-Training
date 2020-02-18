@@ -6,12 +6,12 @@
 	<!-- Parent metadata -->
 	<parent>
 		<groupId>com.gyaltso.training</groupId>
-		<artifactId>com.gyaltso.training.rcp</artifactId>
+		<artifactId>com.gyaltso.training.emf</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../../com.gyaltso.training.emf</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<!-- Artifact metadata -->
 	<artifactId>com.gyaltso.training.emf.model</artifactId>
-	<packaging>eclipse-plugin</packaging>
-	</project>
+	<packaging>eclipse-plugin</packaging> 
+</project>

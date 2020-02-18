@@ -8,10 +8,24 @@
 		<groupId>com.gyaltso.training</groupId>
 		<artifactId>com.gyaltso.training.emf</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../../com.gyaltso.training.emf</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<!-- Artifact metadata -->
 	<artifactId>com.gyaltso.training.emf.model.tests</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>eclipse-test-plugin</packaging>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>1.6.0</version>
+				<configuration>
+					<useUIHarness>true</useUIHarness>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

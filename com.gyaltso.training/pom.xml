@@ -23,8 +23,47 @@
 		</developer>
 	</developers>
 
+	<properties>
+		<java.version>1.8</java.version>
+		<project.encoding>UTF-8</project.encoding>
+		<tycho.version>1.6.0</tycho.version>
+		<eclipse-repo.url>http://download.eclipse.org/releases/2019-12</eclipse-repo.url>
+	</properties>
+
 	<modules>
 		<module>com.gyaltso.training.rcp</module>
 		<module>com.gyaltso.training.emf</module>
 	</modules>
+
+	<repositories>
+		<repository>
+			<id>eclipse-release</id>
+			<url>${eclipse-repo.url}</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<encoding>${project.encoding}</encoding>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-maven-plugin</artifactId>
+					<version>${tycho.version}</version>
+					<extensions>true</extensions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
