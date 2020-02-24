@@ -23,6 +23,7 @@ import org.eclipse.ui.part.ViewPart;
 
 import com.gyaltso.training.rcp.jface.jobs.progress.HelloWorldJob;
 import com.gyaltso.training.rcp.jface.jobs.progress.JobWithProgress;
+import com.gyaltso.training.rcp.jface.jobs.progress.JobWithRescheduling;
 import com.gyaltso.training.rcp.jface.jobs.progress.JobWithSubtask;
 import com.gyaltso.training.rcp.jface.jobs.progress.SystemJob;
 import com.gyaltso.training.rcp.jface.jobs.progress.UserJob;
@@ -129,6 +130,86 @@ public class JobSchedulerView extends ViewPart {
 		});
 	}
 	
+	private void createJobWithRescheduling(final Composite parent) {
+		new Label(parent, SWT.NONE).setText("Job with rescheduling: ");
+		
+		final Button button = new Button(parent, SWT.PUSH);
+		button.setText("Schedule");
+		button.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				final Job job = new JobWithRescheduling();
+				job.schedule();
+			};
+		});
+	}
+	
+	private void createJobWithSchedulingPriorities(final Composite parent) {
+		new Label(parent, SWT.NONE).setText("Job with scheduling priorities: ");
+		
+		final Button button = new Button(parent, SWT.PUSH);
+		button.setText("Schedule");
+		button.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				final Job interactiveJob = new JobWithProgress("Highest Priority Interactive job", 1000);
+				final Job decorateJob = new JobWithProgress("Lowest piority Decorate job", 2000);
+				final Job shortJob = new JobWithProgress("Short jobs having priority after the Interactive jobs", 200);
+				final Job longRunningJob = new JobWithProgress("Long running background jobs", 4000);
+				final Job buildJob = new JobWithProgress("Long running build jobs", 2500);
+				
+				interactiveJob.setPriority(Job.INTERACTIVE);
+				decorateJob.setPriority(Job.DECORATE);
+				shortJob.setPriority(Job.SHORT);
+				longRunningJob.setPriority(Job.LONG);
+				buildJob.setPriority(Job.BUILD);
+				
+				interactiveJob.schedule();
+				decorateJob.schedule();
+				shortJob.schedule();
+				longRunningJob.schedule();
+				buildJob.schedule();
+			};
+		});
+	}
+	
+	private void createJobWithSchedulingDelay(final Composite parent) {
+		new Label(parent, SWT.NONE).setText("Job with scheduling delay: ");
+		
+		final Button button = new Button(parent, SWT.PUSH);
+		button.setText("Schedule");
+		button.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				final Job job01 = new JobWithProgress("Job 01");
+				final Job job02 = new JobWithProgress("Job 02");
+				final Job job03 = new JobWithProgress("Job 03");
+				
+				job01.schedule();
+				job02.schedule(1000);
+				job03.schedule(2000);
+			};
+		});
+	}
+	
+	private void createJobWithJoinAPI(final Composite parent) {
+		new Label(parent, SWT.NONE).setText("Job with Join: ");
+		
+		final Button button = new Button(parent, SWT.PUSH);
+		button.setText("Schedule");
+		button.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				final Job job01 = new JobWithProgress("Job 01", 2500);
+				job01.schedule();
+				
+				try {
+					job01.join();
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}
+				
+				System.out.println("Code is executed after the Job 01 completes its execution");
+			};
+		});
+	}
+	
 	@Override
 	public void createPartControl(Composite parent) {
 		final Composite child = new Composite(parent, SWT.NONE);
@@ -151,6 +232,18 @@ public class JobSchedulerView extends ViewPart {
 
 		// Job with progress groups
 		createUserJob(child);
+
+		// Job with rescheduling
+		createJobWithRescheduling(child);
+		
+		// Job with scheduling priorities
+		createJobWithSchedulingPriorities(child);
+		
+		// Job with scheduling delay
+		createJobWithSchedulingDelay(child);
+		
+		// Job that makes use of the #join() API
+		createJobWithJoinAPI(child);
 	}
 
 	@Override
