@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.gyaltso.training.rcp.jface.jobs.category"
+            name="Gyaltso Jobs Views"
+            parentCategory="org.eclipse.ui">
+      </category>
+      <view
+            allowMultiple="false"
+            category="com.gyaltso.training.rcp.jface.jobs.category"
+            class="com.gyaltso.training.rcp.jface.jobs.view.JobSchedulerView"
+            icon="icons/jobs.png"
+            id="com.gyaltso.training.rcp.jface.jobs.joblauncherview"
+            name="Job Launcher view"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
