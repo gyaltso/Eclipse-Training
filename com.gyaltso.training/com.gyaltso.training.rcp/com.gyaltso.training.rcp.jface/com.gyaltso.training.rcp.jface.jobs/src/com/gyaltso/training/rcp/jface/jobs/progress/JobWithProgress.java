@@ -21,14 +21,19 @@ import org.eclipse.core.runtime.jobs.Job;
 public class JobWithProgress extends Job {
 
 	// The total number of work units into which the main task is subdivided
-	private final int totalUnitsOfWork = 500;
+	private int totalUnitsOfWork = 500;
 
 	public JobWithProgress() {
 		super("Job with progress...");
 	}
-	
+
 	public JobWithProgress(String name) {
 		super(name);
+	}
+
+	public JobWithProgress(String name, int totalUnitsOfWork) {
+		this(name);
+		this.totalUnitsOfWork = totalUnitsOfWork;
 	}
 
 	@Override
