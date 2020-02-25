@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.gyaltso.training.rcp.jface.views.category"
+            name="Gyaltso">
+      </category>
+      <view
+            allowMultiple="false"
+            category="com.gyaltso.training.rcp.jface.views.category"
+            class="com.gyaltso.training.rcp.jface.views.EmptyView"
+            icon="icons/image.png"
+            id="com.gyaltso.training.rcp.jface.views.view.emptyview"
+            name="Empty View"
+            restorable="true">
+      </view>
+      <stickyView
+            closeable="false"
+            id="com.gyaltso.training.rcp.jface.views.view.emptyview"
+            location="BOTTOM"
+            moveable="false">
+      </stickyView>
+   </extension>
+
+</plugin>
