@@ -19,5 +19,8 @@
 		<module>com.gyaltso.training.rcp.jface.pcf</module>
 		<module>com.gyaltso.training.rcp.jface.pef</module>
 		<module>com.gyaltso.training.rcp.jface.jobs</module>
+		<module>com.gyaltso.training.rcp.jface.views</module>
+		<module>com.gyaltso.training.rcp.jface.editors</module>
+		<module>com.gyaltso.training.rcp.jface.wizards</module>
 	</modules>
 </project>
