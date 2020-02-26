@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.gyaltso.training.rcp.jface.editors.DirtyStateEditor"
+            default="false"
+            extensions="gte"
+            id="com.gyaltso.training.rcp.jface.editors.gyaltsotexteditor"
+            name="Gyaltso Text editor">
+      </editor>
+   </extension>
+
+</plugin>
