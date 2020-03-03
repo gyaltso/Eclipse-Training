@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SWT Databinding example project
+Bundle-SymbolicName: com.gyaltso.training.rcp.swt.databinding
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.gyaltso.training.rcp.swt.databinding.Activator
+Bundle-Vendor: Gyaltso Technologies
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.databinding,
+ org.eclipse.core.databinding.observable,
+ org.eclipse.jface.databinding,
+ org.eclipse.core.databinding.beans,
+ org.eclipse.core.databinding.property,
+ com.ibm.icu
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.gyaltso.training.rcp.swt.databinding
+Bundle-ActivationPolicy: lazy

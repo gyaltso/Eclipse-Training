@@ -6,9 +6,9 @@
       <editor
             class="com.gyaltso.training.rcp.jface.editors.DirtyStateEditor"
             default="false"
-            extensions="gte"
-            id="com.gyaltso.training.rcp.jface.editors.gyaltsotexteditor"
-            name="Gyaltso Text editor">
+            extensions="dse"
+            id="com.gyaltso.training.rcp.jface.editors.dirtystateeditor"
+            name="Gyaltso Dirty State Editor">
       </editor>
    </extension>
 

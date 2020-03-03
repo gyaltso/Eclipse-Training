@@ -6,7 +6,13 @@ Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: com.gyaltso.training.rcp.jface.views.Activator
 Bundle-Vendor: Gyaltso Technologies
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.core.databinding;bundle-version="1.7.700",
+ org.eclipse.core.databinding.beans;bundle-version="1.6.0",
+ org.eclipse.core.databinding.observable;bundle-version="1.8.100",
+ org.eclipse.core.databinding.property;bundle-version="1.7.200",
+ org.eclipse.jface.databinding;bundle-version="1.9.200",
+ com.ibm.icu;bundle-version="64.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.gyaltso.training.rcp.jface.views
 Bundle-ActivationPolicy: lazy
