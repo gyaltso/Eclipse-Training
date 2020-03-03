@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="com.gyaltso.training.rcp.jface.views.category"
+            class="com.gyaltso.training.rcp.jface.viewers.viewers.ListViewerExample"
+            icon="icons/list.gif"
+            id="com.gyaltso.training.rcp.jface.viewers.listviewerexample"
+            name="List Viewer Example"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            category="com.gyaltso.training.rcp.jface.views.category"
+            class="com.gyaltso.training.rcp.jface.viewers.viewers.TreeViewerExample"
+            icon="icons/tree.gif"
+            id="com.gyaltso.training.rcp.jface.viewers.treeviewerexample"
+            name="Tree Viewer Example"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            category="com.gyaltso.training.rcp.jface.views.category"
+            class="com.gyaltso.training.rcp.jface.viewers.viewers.TableViewerExample"
+            icon="icons/table_nocols.gif"
+            id="com.gyaltso.training.rcp.jface.viewers.tableviewerexample"
+            name="Table Viewer Example"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            category="com.gyaltso.training.rcp.jface.views.category"
+            class="com.gyaltso.training.rcp.jface.viewers.viewers.TableViewerWithColumns"
+            icon="icons/table.gif"
+            id="com.gyaltso.training.rcp.jface.viewers.tableviewerwithcolumnsexample"
+            name="Table Viewer with Columns Example"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>

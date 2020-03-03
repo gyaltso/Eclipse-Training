@@ -22,5 +22,6 @@
 		<module>com.gyaltso.training.rcp.jface.views</module>
 		<module>com.gyaltso.training.rcp.jface.editors</module>
 		<module>com.gyaltso.training.rcp.jface.wizards</module>
+		<module>com.gyaltso.training.rcp.jface.viewers</module>
 	</modules>
 </project>
