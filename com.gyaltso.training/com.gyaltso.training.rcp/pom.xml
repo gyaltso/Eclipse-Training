@@ -17,6 +17,7 @@
 	<modules>
 		<module>com.gyaltso.training.rcp.jface</module>
 		<module>com.gyaltso.training.rcp.swt</module>
+		<module>com.gyaltso.training.rcp.model</module>
 	</modules>
 
 	<build>

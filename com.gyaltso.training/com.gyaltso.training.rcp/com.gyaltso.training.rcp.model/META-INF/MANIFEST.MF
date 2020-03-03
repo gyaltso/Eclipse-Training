@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Product Model
+Bundle-SymbolicName: com.gyaltso.training.rcp.model
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: Gyaltso Technologies
+Automatic-Module-Name: com.gyaltso.training.rcp.model
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.guava
+Export-Package: com.gyaltso.training.rcp.model,
+ com.gyaltso.training.rcp.model.factory,
+ com.gyaltso.training.rcp.model.util

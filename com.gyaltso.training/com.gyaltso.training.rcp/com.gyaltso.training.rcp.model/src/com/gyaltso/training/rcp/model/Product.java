@@ -10,7 +10,7 @@
 /**
  * 
  */
-package com.gyaltso.training.rcp.jface.viewers.model;
+package com.gyaltso.training.rcp.model;
 
 /**
  * @author Neeraj Bhusare

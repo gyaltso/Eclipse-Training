@@ -1,12 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JFace Wizards exercise
-Bundle-SymbolicName: com.gyaltso.training.rcp.jface.wizards
-Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.gyaltso.training.rcp.jface.wizards;singleton:=true
+Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: com.gyaltso.training.rcp.jface.wizards.Activator
 Bundle-Vendor: Gyaltso Technologies
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ com.gyaltso.training.rcp.model;bundle-version="0.0.1",
+ org.eclipse.core.resources
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.gyaltso.training.rcp.jface.wizards
 Bundle-ActivationPolicy: lazy

@@ -10,9 +10,13 @@
 /**
  * 
  */
-package com.gyaltso.training.rcp.jface.viewers.model;
+package com.gyaltso.training.rcp.model.factory;
 
 import com.google.common.collect.Lists;
+import com.gyaltso.training.rcp.model.CashBackProduct;
+import com.gyaltso.training.rcp.model.Region;
+import com.gyaltso.training.rcp.model.UsageType;
+import com.gyaltso.training.rcp.model.util.CashBackProducts;
 
 /**
  * @author Neeraj Bhusare

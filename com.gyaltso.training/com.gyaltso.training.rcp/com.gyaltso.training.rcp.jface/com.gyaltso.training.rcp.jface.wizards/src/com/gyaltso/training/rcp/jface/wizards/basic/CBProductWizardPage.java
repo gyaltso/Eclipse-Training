@@ -10,38 +10,27 @@
 /**
  * 
  */
-package com.gyaltso.training.rcp.jface.viewers.model;
+package com.gyaltso.training.rcp.jface.wizards.basic;
 
-import java.util.Objects;
+import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
 
 /**
  * @author Neeraj Bhusare
  *
  */
-public class Region {
+public class CBProductWizardPage extends WizardPage {
 
-	private final String code;
-
-	public Region(String code) {
-		this.code = code;
-	}
-
-	public String getCode() {
-		return code;
+	protected CBProductWizardPage() {
+		super("CashBack Product creation page");
+		setTitle("CashBack Product");
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (obj == null) {
-			return false;
-		} else if (obj instanceof Region) {
-			return this.code.equals(((Region) obj).getCode());
-		}
-		return super.equals(obj);
+	public void createControl(Composite parent) {
+		final Composite child = new Composite(parent, SWT.NONE);
+		setControl(child);
 	}
-	
-	@Override
-	public int hashCode() {
-		return code.hashCode();
-	}
+
 }

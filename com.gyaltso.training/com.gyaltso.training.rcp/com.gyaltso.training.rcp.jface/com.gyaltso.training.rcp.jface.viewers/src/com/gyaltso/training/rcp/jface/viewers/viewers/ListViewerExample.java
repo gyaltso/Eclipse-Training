@@ -23,9 +23,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.ViewPart;
 
 import com.gyaltso.training.rcp.jface.viewers.Activator;
-import com.gyaltso.training.rcp.jface.viewers.model.CashBackProduct;
-import com.gyaltso.training.rcp.jface.viewers.model.CashBackProducts;
-import com.gyaltso.training.rcp.jface.viewers.model.ProductCreationFactory;
+import com.gyaltso.training.rcp.model.CashBackProduct;
+import com.gyaltso.training.rcp.model.factory.ProductCreationFactory;
+import com.gyaltso.training.rcp.model.util.CashBackProducts;
 
 /**
  * @author Neeraj Bhusare

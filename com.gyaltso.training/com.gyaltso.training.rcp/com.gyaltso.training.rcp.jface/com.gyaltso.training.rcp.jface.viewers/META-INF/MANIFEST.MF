@@ -7,7 +7,7 @@ Bundle-Activator: com.gyaltso.training.rcp.jface.viewers.Activator
 Bundle-Vendor: Gyaltso Technologies
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- com.google.guava
+ com.gyaltso.training.rcp.model;bundle-version="0.0.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.gyaltso.training.rcp.jface.viewers
 Bundle-ActivationPolicy: lazy

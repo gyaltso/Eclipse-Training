@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.gyaltso.training.rcp.jface.wizards.basic.CBProductWizardLauncher"
+            id="com.gyaltso.training.rcp.jface.wizards.cbpwizardlauncher"
+            name="CB Product Wizard Launcher">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.gyaltso.training.rcp.jface.wizards.toolbar1">
+            <command
+                  commandId="com.gyaltso.training.rcp.jface.wizards.cbpwizardlauncher"
+                  icon="icons/cbp.gif"
+                  id="com.gyaltso.training.rcp.jface.wizards.cbpwizardlauncher"
+                  label="CachBack Product Launcher"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.gyaltso.training.rcp.jface.wizards.new.category"
+            name="Gyaltso wizards">
+      </category>
+      <wizard
+            category="com.gyaltso.training.rcp.jface.wizards.new.category"
+            class="com.gyaltso.training.rcp.jface.wizards.nnew.CBProductCreationWizard"
+            icon="icons/new_wiz.png"
+            id="com.gyaltso.training.rcp.jface.wizards.newproductwizard"
+            name="New CashBack Product wizard"
+            project="false">
+      </wizard>
+   </extension>
+
+</plugin>

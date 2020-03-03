@@ -10,19 +10,38 @@
 /**
  * 
  */
-package com.gyaltso.training.rcp.jface.viewers.model;
+package com.gyaltso.training.rcp.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Neeraj Bhusare
  *
  */
-public class CashBackProducts extends ArrayList<Product> {
-	
-	public CashBackProducts(List<Product> products) {
-		products.stream().forEach(product -> add(product));
+public class Region {
+
+	private final String code;
+
+	public Region(String code) {
+		this.code = code;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		} else if (obj instanceof Region) {
+			return this.code.equals(((Region) obj).getCode());
+		}
+		return super.equals(obj);
 	}
 	
+	@Override
+	public int hashCode() {
+		return code.hashCode();
+	}
 }

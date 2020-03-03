@@ -10,32 +10,21 @@
 /**
  * 
  */
-package com.gyaltso.training.rcp.jface.viewers.model;
+package com.gyaltso.training.rcp.model.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.gyaltso.training.rcp.model.Product;
 
 /**
  * @author Neeraj Bhusare
  *
  */
-public abstract class CreditCardProduct extends Product {
-
-	private int annualFees = 0;
-
-	private UsageType usageType;
-
-	public UsageType getUsageType() {
-		return usageType;
+public class CashBackProducts extends ArrayList<Product> {
+	
+	public CashBackProducts(List<Product> products) {
+		products.stream().forEach(product -> add(product));
 	}
-
-	public void setUsageType(UsageType usageType) {
-		this.usageType = usageType;
-	}
-
-	public int getAnnualFees() {
-		return annualFees;
-	}
-
-	public void setAnnualFees(int annualFees) {
-		this.annualFees = annualFees;
-	}
-
+	
 }

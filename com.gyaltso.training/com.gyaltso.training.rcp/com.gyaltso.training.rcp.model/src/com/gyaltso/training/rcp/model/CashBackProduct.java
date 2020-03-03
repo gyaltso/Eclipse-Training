@@ -7,7 +7,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
 
-package com.gyaltso.training.rcp.jface.viewers.model;
+package com.gyaltso.training.rcp.model;
 
 public class CashBackProduct extends CreditCardProduct {
 
