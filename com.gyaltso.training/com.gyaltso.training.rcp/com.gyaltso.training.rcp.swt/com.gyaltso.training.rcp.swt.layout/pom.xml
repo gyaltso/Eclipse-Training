@@ -8,16 +8,11 @@
 		<groupId>com.gyaltso.training</groupId>
 		<artifactId>com.gyaltso.training.rcp</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<!-- Artifact metadata -->
-	<artifactId>com.gyaltso.training.rcp.swt</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>com.gyaltso.training.rcp.swt.layout</artifactId>
+	<packaging>eclipse-plugin</packaging>
 
-	<modules>
-		<module>com.gyaltso.training.rcp.swt.databinding</module>
-		<module>com.gyaltso.training.rcp.swt.helloworld</module>
-		<module>com.gyaltso.training.rcp.swt.layout</module>
-	</modules>
 </project>
