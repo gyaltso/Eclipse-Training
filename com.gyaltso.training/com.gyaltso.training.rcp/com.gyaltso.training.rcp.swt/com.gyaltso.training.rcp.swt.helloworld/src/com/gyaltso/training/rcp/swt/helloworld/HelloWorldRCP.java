@@ -23,22 +23,29 @@ public class HelloWorldRCP {
 
 	private Shell createAndOpenShell(final Display display) {
 		final Shell shell = new Shell(display);
-		//shell.pack();
+		// shell.pack();
 		shell.open();
 		return shell;
 	}
 
 	public static void main(String[] args) {
+		/**
+		 * The thread in which Display object is created is the UI thread. It enables -
+		 * 1) Enables communication between the SWT app. and the underlying OS, 2) Makes
+		 * it possible for non-ui threads to access widgets in the UI thread (A.K.A
+		 * inter-thread communication), 3) Disposes OS resources allocated by the SWT
+		 * app.
+		 */
 		final Display display = new Display();
 		final Shell shell = new HelloWorldRCP().createAndOpenShell(display);
 
-		while (!shell.isDisposed()) {
-			if (!display.readAndDispatch()) {
+		while (!shell.isDisposed()) { // wait until the shell is closed
+			if (!display.readAndDispatch()) { // check the OS event query for events
 				display.sleep();
 			}
 		}
 
-		display.dispose();
+		display.dispose(); // Dispose the OS resources
 	}
 
 }
