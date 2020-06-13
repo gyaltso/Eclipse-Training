@@ -12,15 +12,25 @@
  */
 package com.gyaltso.training.rcp.jface.viewers.viewers;
 
+import java.net.URL;
+
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.jface.resource.LocalResourceManager;
+import org.eclipse.jface.resource.ResourceManager;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
-import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.ViewPart;
+import org.osgi.framework.Bundle;
+import org.osgi.framework.FrameworkUtil;
 
 import com.gyaltso.training.rcp.model.CashBackProduct;
 import com.gyaltso.training.rcp.model.factory.ProductCreationFactory;
@@ -34,6 +44,8 @@ public class TableViewerWithColumns extends ViewPart {
 
 	private final static CashBackProducts cashBackProducts = ProductCreationFactory.INSTANCE
 			.createNewCashBackProducts();
+	
+	private final ResourceManager resourceManager = new LocalResourceManager(JFaceResources.getResources());
 
 	public TableViewerWithColumns() {
 	}
@@ -59,6 +71,13 @@ public class TableViewerWithColumns extends ViewPart {
 			public String getText(Object element) {
 				return ((CashBackProduct)element).getName();
 			}
+			
+			@Override
+			public Image getImage(Object element) {
+				Bundle b = FrameworkUtil.getBundle(TableViewerWithColumns.class);
+				URL url = FileLocator.find(b, new Path("icons/item.png"));
+				return resourceManager.createImage(ImageDescriptor.createFromURL(url));
+			}
 		});
 
 		final TableViewerColumn productDescColumn = new TableViewerColumn(tableViewer, SWT.None);
@@ -69,10 +88,16 @@ public class TableViewerWithColumns extends ViewPart {
 			public String getText(Object element) {
 				return ((CashBackProduct)element).getDescription();
 			}
+			
+			@Override
+			public Image getImage(Object element) {
+				Bundle b = FrameworkUtil.getBundle(TableViewerWithColumns.class);
+				URL url = FileLocator.find(b, new Path("icons/item.png"));
+				return resourceManager.createImage(ImageDescriptor.createFromURL(url));
+			}
 		});
 		
 		tableViewer.setContentProvider(new ProductContentProvider());
-		tableViewer.setLabelProvider(new ProductLabelProvider());
 		tableViewer.setInput(cashBackProducts);
 	}
 
@@ -87,14 +112,4 @@ public class TableViewerWithColumns extends ViewPart {
 		}
 	}
 
-	private static class ProductLabelProvider extends LabelProvider {
-
-		@Override
-		public String getText(Object element) {
-			if (element instanceof CashBackProduct) {
-				return ((CashBackProduct) element).getName();
-			}
-			return "";
-		}
-	}
 }
